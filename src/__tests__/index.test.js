@@ -2,6 +2,7 @@ import DruxtThemeUmamiBootstrapModule from '..'
 
 const mock = {
   addPlugin: jest.fn(),
+  addModule: jest.fn(),
   DruxtThemeUmamiBootstrapModule
 }
 
@@ -13,4 +14,5 @@ test('Nuxt module', () => {
   }
   mock.DruxtThemeUmamiBootstrapModule()
   expect(mock.addPlugin).toHaveBeenCalled()
+  expect(mock.addModule).toHaveBeenCalled()
 })
