@@ -64,7 +64,7 @@ if (!argv.format || argv.format === 'es') {
     ...baseConfig,
     external,
     output: {
-      file: 'dist/druxt-umami-bootstrap.esm.js',
+      file: 'dist/druxt-theme-umami-bootstrap.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -83,7 +83,7 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/druxt-umami-bootstrap.ssr.js',
+      file: 'dist/druxt-theme-umami-bootstrap.ssr.js',
       format: 'cjs',
       name: 'VueDrupalEntity',
       exports: 'named',
@@ -110,7 +110,7 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/druxt-umami-bootstrap.min.js',
+      file: 'dist/druxt-theme-umami-bootstrap.min.js',
       format: 'iife',
       name: 'VueDrupalEntity',
       exports: 'named',

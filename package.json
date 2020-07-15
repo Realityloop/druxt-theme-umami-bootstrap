@@ -1,10 +1,10 @@
 {
-  "name": "druxt-umami-bootstrap",
+  "name": "druxt-theme-umami-bootstrap",
   "version": "0.1.0",
   "description": "Provides an Entity render Vue component to be used within a Druxt (DRUpal nuXT) project.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Realityloop/druxt-umami-bootstrap"
+    "url": "git+https://github.com/Realityloop/druxt-theme-umami-bootstrap"
   },
   "keywords": [
     "drupal",
@@ -18,12 +18,12 @@
   "author": "Stuart Clark <stuart@realityloop.com> (realityloop.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Realityloop/druxt-umami-bootstrap/issues"
+    "url": "https://github.com/Realityloop/druxt-theme-umami-bootstrap/issues"
   },
-  "homepage": "https://github.com/Realityloop/druxt-umami-bootstrap#readme",
-  "main": "dist/druxt-umami-bootstrap.ssr.js",
-  "module": "dist/druxt-umami-bootstrap.esm.js",
-  "unpkg": "dist/druxt-umami-bootstrap.min.js",
+  "homepage": "https://github.com/Realityloop/druxt-theme-umami-bootstrap#readme",
+  "main": "dist/druxt-theme-umami-bootstrap.ssr.js",
+  "module": "dist/druxt-theme-umami-bootstrap.esm.js",
+  "unpkg": "dist/druxt-theme-umami-bootstrap.min.js",
   "files": [
     "dist",
     "nuxt"

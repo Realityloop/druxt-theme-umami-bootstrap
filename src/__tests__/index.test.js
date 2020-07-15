@@ -1,16 +1,16 @@
-import DruxtUmamiBootstrapModule from '..'
+import DruxtThemeUmamiBootstrapModule from '..'
 
 const mock = {
   addPlugin: jest.fn(),
-  DruxtUmamiBootstrapModule
+  DruxtThemeUmamiBootstrapModule
 }
 
 test('Nuxt module', () => {
-  expect(() => { mock.DruxtUmamiBootstrapModule() }).toThrow('Druxt settings missing.')
+  expect(() => { mock.DruxtThemeUmamiBootstrapModule() }).toThrow('Druxt settings missing.')
 
   mock.options = {
     druxt: {}
   }
-  mock.DruxtUmamiBootstrapModule()
+  mock.DruxtThemeUmamiBootstrapModule()
   expect(mock.addPlugin).toHaveBeenCalled()
 })

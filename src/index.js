@@ -15,7 +15,7 @@ export default function (moduleOptions = {}) {
   // Add plugin.
   this.addPlugin({
     src: resolve(__dirname, '../nuxt/plugin.js'),
-    fileName: 'druxt-umami-bootstrap.js',
+    fileName: 'druxt-theme-umami-bootstrap.js',
     options
   })
 }

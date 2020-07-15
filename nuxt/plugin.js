@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import { Components } from 'druxt-umami-bootstrap'
+import { Components } from 'druxt-theme-umami-bootstrap'
 
 Vue.use({
   install: function (Vue) {
