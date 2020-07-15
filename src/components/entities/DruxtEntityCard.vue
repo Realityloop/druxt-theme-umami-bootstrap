@@ -12,10 +12,7 @@
     <b-card-body class="h-100 d-flex flex-column">
       <b-card-title>{{ entity.attributes.title }}</b-card-title>
 
-      <b-card-sub-title
-        v-if="$scopedSlots.field_difficulty"
-        class="mb-3"
-      >
+      <b-card-sub-title v-if="$scopedSlots.field_difficulty" class="mb-3">
         <slot name="field_difficulty" />
       </b-card-sub-title>
 
@@ -26,22 +23,22 @@
         :to="to"
         :variant="hover ? 'primary' : 'secondary'"
       >
-        View {{ schema.config.bundle }} <b-icon icon="arrow-right" />
+        View {{ schema.config.bundle }} <b-icon-arrow-right />
       </b-button>
     </b-card-body>
   </b-card>
 </template>
 
 <script>
-import { BIcon } from 'bootstrap-vue'
+import { BIconArrowRight } from 'bootstrap-vue'
 import { DruxtEntityMixin } from 'druxt-entity'
 
 export default {
   name: 'DruxtEntityCard',
 
-  components: { BIcon },
-
   mixins: [DruxtEntityMixin],
+
+  components: { BIconArrowRight },
 
   data: () => ({
     hover: false,

@@ -13,30 +13,18 @@
       </b-col>
       <b-col>
         <b-row>
-          <b-col
-            cols="12"
-            lg="6"
-          >
+          <b-col cols="12" lg="6">
             <slot name="field_preparation_time" />
           </b-col>
-          <b-col
-            cols="12"
-            lg="6"
-          >
+          <b-col cols="12" lg="6">
             <slot name="field_cooking_time" />
           </b-col>
         </b-row>
         <b-row>
-          <b-col
-            cols="12"
-            lg="6"
-          >
+          <b-col cols="12" lg="6">
             <slot name="field_number_of_servings" />
           </b-col>
-          <b-col
-            cols="12"
-            lg="6"
-          >
+          <b-col cols="12" lg="6">
             <slot name="field_difficulty" />
           </b-col>
         </b-row>

@@ -1,8 +1,5 @@
 <template>
-  <b-card-img
-    v-if="entities[0]"
-    v-bind="props"
-  />
+  <b-card-img v-if="entities[0]" v-bind="props" />
 </template>
 
 <script>

@@ -1,14 +1,6 @@
 <template>
-  <component
-    :is="wrapper.component"
-    v-bind="wrapper.props"
-  >
-    <b-badge
-      pill
-      :variant="variant"
-    >
-      {{ items[0] }}
-    </b-badge>
+  <component :is="wrapper.component" v-bind="wrapper.props">
+    <b-badge pill :variant="variant">{{ items[0] }}</b-badge>
   </component>
 </template>
 

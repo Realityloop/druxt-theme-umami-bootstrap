@@ -1,10 +1,9 @@
 <script>
 import DruxtEntityCard from './DruxtEntityCard.vue'
 
-const DruxtEntityCardCommon = {
-  ...DruxtEntityCard,
+export default {
   name: 'DruxtEntityCardCommon',
-}
 
-export default DruxtEntityCardCommon
+  extends: DruxtEntityCard
+}
 </script>

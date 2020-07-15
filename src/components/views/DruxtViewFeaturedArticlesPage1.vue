@@ -15,16 +15,21 @@
 </template>
 
 <script>
+import { DruxtViewsViewMixin } from 'druxt-views'
+
 export default {
   name: 'DruxtViewFeaturedArticlesPage1',
+
+  mixins: [DruxtViewsViewMixin],
 
   computed: {
     wrapper: () => ({
       component: 'b-col',
       props: {
         class: 'mb-3',
-        cols: 6,
+        cols: 12,
         md: 4,
+        sm: 6,
       },
     }),
   },

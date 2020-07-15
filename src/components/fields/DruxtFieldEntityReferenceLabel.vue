@@ -2,30 +2,24 @@
   <component
     :is="wrapper.component"
     v-if="entities && typeof entities[0] !== 'undefined'"
-    v-bind="wrapper.props"
   >
     <!-- Label: Above -->
     <div v-if="$slots['label-above']">
-      <slot #label-above />
+      <slot name="label-above" />
     </div>
 
     <!-- Label: Inline -->
-    <slot
-      v-if="$slots['label-inline']"
-      #label-inline
-    />
+    <slot v-if="$slots['label-inline']" name="label-inline" />
 
     <!-- Items -->
     <component
+      class="mr-1"
       :is="component"
       v-for="(entity, key) of entities"
       :key="key"
-      class="mr-1"
       v-bind="entity.props || false"
     >
-      <b-badge pill>
-        {{ entity.text }}
-      </b-badge>
+      <b-badge pill>{{ entity.text }}</b-badge>
     </component>
   </component>
 </template>
