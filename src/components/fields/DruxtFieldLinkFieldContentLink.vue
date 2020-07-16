@@ -2,7 +2,7 @@
 import { DruxtFieldLink } from 'druxt-entity'
 
 export default {
-  name: 'DruxtFieldLink',
+  name: 'DruxtFieldLinkFieldContentLink',
 
   extends: DruxtFieldLink,
 
