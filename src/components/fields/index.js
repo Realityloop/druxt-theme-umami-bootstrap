@@ -1,8 +1,8 @@
 import DruxtFieldEntityReferenceLabel from './DruxtFieldEntityReferenceLabel.vue'
 export { DruxtFieldEntityReferenceLabel }
 
-import DruxtFieldLink from './DruxtFieldLink.vue'
-export { DruxtFieldLink }
+import DruxtFieldLinkFieldContentLink from './DruxtFieldLinkFieldContentLink.vue'
+export { DruxtFieldLinkFieldContentLink }
 
 import DruxtFieldListDefaultFieldDifficulty from './DruxtFieldListDefaultFieldDifficulty.vue'
 export { DruxtFieldListDefaultFieldDifficulty }
