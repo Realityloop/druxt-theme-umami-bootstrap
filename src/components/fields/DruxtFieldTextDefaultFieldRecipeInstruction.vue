@@ -1,17 +1,19 @@
 <template>
   <component :is="wrapper.component" v-bind="wrapper.props">
     <h3 v-if="$slots['label-above']">{{ schema.label.text }}</h3>
-    <!-- <span v-html="items[0].processed" /> -->
-    <b-list-group>
-      <!-- ^ possibly add flush attribute here -->
-      <b-list-group-item button v-for="item in items" :key="item.message">
-        {{ item.message }}
+
+    <b-list-group v-if="list">
+      <b-list-group-item button v-for="(item, key) of list" :key="key">
+        {{ item }}
       </b-list-group-item>
     </b-list-group>
+
+    <span v-else v-html="items[0].processed" />
   </component>
 </template>
 
 <script>
+import { parseFragment } from 'parse5'
 import { DruxtFieldMixin } from 'druxt-entity'
 
 export default {
@@ -19,16 +21,19 @@ export default {
 
   mixins: [DruxtFieldMixin],
 
-  computed: {},
+  computed: {
+    list() {
+      const fragment = parseFragment(this.items[0].processed)
+      if (fragment.childNodes[0].tagName !== 'ol') {
+        return false
+      }
 
-  data: {
-    items: [
-      { message: 'Step one.' },
-      { message: 'Step two.' },
-      { message: 'Step three.' },
-      { message: 'Step four.' },
-      { message: 'Step five.' },
-    ],
+      return fragment.childNodes[0].childNodes
+        .map((item) =>
+          item.tagName === 'li' ? item.childNodes[0].value : null
+        )
+        .filter((item) => item)
+    },
   },
 }
 </script>
