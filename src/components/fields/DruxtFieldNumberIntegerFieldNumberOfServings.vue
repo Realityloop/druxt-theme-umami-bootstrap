@@ -1,6 +1,6 @@
 <template>
   <component :is="wrapper.component" v-bind="wrapper.props">
-    <b-icon icon="puzzle" font-scale="2"></b-icon>
+    <b-icon icon="people" font-scale="2"></b-icon>
     <p class="mt-2">
       <span v-if="$slots['label-above']">{{ schema.label.text }}<br /></span>
       {{ items[0] }}
@@ -9,17 +9,19 @@
 </template>
 
 <script>
-import { BIcon, BIconPuzzle } from 'bootstrap-vue'
+import { BIcon, BIconPeople } from 'bootstrap-vue'
 import { DruxtFieldMixin } from 'druxt-entity'
 
 export default {
-  name: 'DruxtFieldListDefaultFieldDifficulty',
+  name: 'DruxtFieldNumberIntegerFieldNumberOfServings',
 
   mixins: [DruxtFieldMixin],
 
   components: {
     BIcon,
-    BIconPuzzle,
+    BIconPeople,
   },
+
+  computed: {},
 }
 </script>
