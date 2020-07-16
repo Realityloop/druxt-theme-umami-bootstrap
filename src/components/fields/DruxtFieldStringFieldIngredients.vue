@@ -2,7 +2,7 @@
   <component :is="wrapper.component" v-bind="wrapper.props">
     <!-- Label: Above -->
     <div v-if="$slots['label-above']">
-      <slot name="label-above" />
+      <h3>{{ schema.label.text }}</h3>
     </div>
 
     <!-- Label: Inline -->

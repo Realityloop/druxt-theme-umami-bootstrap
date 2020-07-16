@@ -14,10 +14,9 @@
               :options="{ wrapper: { component: 'b-card-text' } }"
             />
 
-            <slot
-              name="field_content_link"
-              :options="{ wrapper: { component: 'b-card-text' } }"
-            />
+            <b-button :to="this.fields.field_content_link.data.uri.replace('internal:', '')" variant="danger">
+              {{ this.fields.field_content_link.data.title }}
+            </b-button>
           </b-card>
         </b-col>
       </b-row>

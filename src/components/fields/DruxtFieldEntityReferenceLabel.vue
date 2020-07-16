@@ -19,7 +19,7 @@
       :key="key"
       v-bind="entity.props || false"
     >
-      <b-badge pill>{{ entity.text }}</b-badge>
+      <b-badge variant="info">{{ entity.text }}</b-badge>
     </component>
   </component>
 </template>
