@@ -12,9 +12,6 @@ export default function (moduleOptions = {}) {
   }
   const options = this.options.druxt
 
-  // Add bootstrap-vue module.
-  this.addModule('bootstrap-vue/nuxt')
-
   // Add plugin.
   this.addPlugin({
     src: resolve(__dirname, '../nuxt/plugin.js'),

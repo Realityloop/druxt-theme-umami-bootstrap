@@ -49,6 +49,7 @@ const external = [
   'druxt-search',
   'druxt-views',
   'path',
+  'parse5'
 ];
 
 // UMD/IIFE shared settings: output.globals
@@ -60,7 +61,8 @@ const globals = {
   'druxt-entity': 'druxtEntity',
   'druxt-search': 'druxtSearch',
   'druxt-views': 'druxtViews',
-  path: 'path'
+  path: 'path',
+  parse5: 'parse5'
 };
 
 // Customize configs for individual targets
