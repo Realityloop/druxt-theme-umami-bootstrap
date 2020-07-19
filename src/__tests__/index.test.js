@@ -14,5 +14,4 @@ test('Nuxt module', () => {
   }
   mock.DruxtThemeUmamiBootstrapModule()
   expect(mock.addPlugin).toHaveBeenCalled()
-  expect(mock.addModule).toHaveBeenCalled()
 })
