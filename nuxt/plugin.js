@@ -9,14 +9,17 @@ import {
   BBadge,
   BButton,
   BCollapse,
+  BFormGroup,
   BImg,
   BLink,
   BreadcrumbPlugin,
   CardPlugin,
   FormPlugin,
   FormInputPlugin,
+  FormTextareaPlugin,
   InputGroupPlugin,
   LayoutPlugin,
+  ListGroupPlugin,
   ModalPlugin,
   NavbarPlugin
 } from 'bootstrap-vue'
@@ -25,6 +28,7 @@ const BootstrapVueComponents = {
   BBadge,
   BButton,
   BCollapse,
+  BFormGroup,
   BImg,
   BLink
 }
@@ -47,7 +51,9 @@ Vue.use(BreadcrumbPlugin)
 Vue.use(CardPlugin)
 Vue.use(FormPlugin)
 Vue.use(FormInputPlugin)
+Vue.use(FormTextareaPlugin)
 Vue.use(InputGroupPlugin)
 Vue.use(LayoutPlugin)
+Vue.use(ListGroupPlugin)
 Vue.use(ModalPlugin)
 Vue.use(NavbarPlugin)
