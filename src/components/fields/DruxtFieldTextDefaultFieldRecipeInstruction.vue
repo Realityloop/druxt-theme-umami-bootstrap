@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import { parseFragment } from 'parse5'
 import { DruxtFieldMixin } from 'druxt-entity'
 
 export default {
@@ -23,17 +22,8 @@ export default {
 
   computed: {
     list() {
-      const fragment = parseFragment(this.items[0].processed)
-      if (fragment.childNodes[0].tagName !== 'ol') {
-        return false
-      }
-
-      return fragment.childNodes[0].childNodes
-        .map((item) =>
-          item.tagName === 'li' ? item.childNodes[0].value : null
-        )
-        .filter((item) => item)
-    },
+      return this.items[0].processed.match(/(?<=<li>).*?(?=<\/li>)/g)
+    }
   },
 }
 </script>

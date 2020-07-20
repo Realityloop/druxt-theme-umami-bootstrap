@@ -1,6 +1,6 @@
 {
   "name": "druxt-theme-umami-bootstrap",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Umami Bootstrap theme for Druxt",
   "repository": {
     "type": "git",
@@ -44,8 +44,7 @@
     ]
   },
   "dependencies": {
-    "bootstrap-vue": "^2.15.0",
-    "parse5": "^6.0.0"
+    "bootstrap-vue": "^2.15.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.9.0",
