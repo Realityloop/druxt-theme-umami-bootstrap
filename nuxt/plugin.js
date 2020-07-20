@@ -6,6 +6,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { Components as DruxtComponents } from 'druxt-theme-umami-bootstrap'
 
 import {
+  BBadge,
   BButton,
   BCollapse,
   BImg,
@@ -21,6 +22,7 @@ import {
 } from 'bootstrap-vue'
 
 const BootstrapVueComponents = {
+  BBadge,
   BButton,
   BCollapse,
   BImg,
