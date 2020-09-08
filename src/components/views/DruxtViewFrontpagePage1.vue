@@ -9,7 +9,7 @@
 
     <!-- Results. -->
     <b-row>
-      <slot v-bind="{ wrapper }" />
+      <slot name="results" v-bind="{ wrapper }" />
     </b-row>
   </div>
 </template>

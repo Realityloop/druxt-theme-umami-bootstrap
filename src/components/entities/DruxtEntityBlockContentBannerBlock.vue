@@ -8,15 +8,11 @@
       <b-row>
         <b-col cols="12" md="6">
           <b-card class="text-white" bg-variant="dark">
-            <slot
-              name="field_title"
-              :options="{ wrapper: { component: 'b-card-title' } }"
-            />
+            <b-card-title>{{ fields.field_title.data }}</b-card-title>
 
-            <slot
-              name="field_summary"
-              :options="{ wrapper: { component: 'b-card-text' } }"
-            />
+            <b-card-text>
+              {{ fields.field_summary.data }}
+            </b-card-text>
 
             <b-button :to="this.fields.field_content_link.data.uri.replace('internal:', '')" variant="danger">
               {{ fields.field_content_link.data.title }}
