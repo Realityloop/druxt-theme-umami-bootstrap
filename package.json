@@ -64,6 +64,7 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "jest": "^25.1.0",
+    "jest-junit": "^11.1.0",
     "jest-mock-axios": "^3.2.0",
     "minimist": "^1.2.0",
     "nodemon": "^2.0.2",
