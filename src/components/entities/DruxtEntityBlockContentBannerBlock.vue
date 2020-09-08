@@ -1,21 +1,21 @@
 <template>
-  <b-row :style="style" class="pb-3 pt-3 pb-md-5 pt-md-5">
+  <b-row
+    v-if="img && fields.field_content_link"
+    :style="style"
+    class="pb-3 pt-3 pb-md-5 pt-md-5"
+  >
     <b-container>
       <b-row>
         <b-col cols="12" md="6">
           <b-card class="text-white" bg-variant="dark">
-            <slot
-              name="field_title"
-              :options="{ wrapper: { component: 'b-card-title' } }"
-            />
+            <b-card-title>{{ fields.field_title.data }}</b-card-title>
 
-            <slot
-              name="field_summary"
-              :options="{ wrapper: { component: 'b-card-text' } }"
-            />
+            <b-card-text>
+              {{ fields.field_summary.data }}
+            </b-card-text>
 
             <b-button :to="this.fields.field_content_link.data.uri.replace('internal:', '')" variant="danger">
-              {{ this.fields.field_content_link.data.title }}
+              {{ fields.field_content_link.data.title }}
             </b-button>
           </b-card>
         </b-col>
@@ -26,29 +26,28 @@
 
 <script>
 import { DruxtEntityMixin } from 'druxt-entity'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'DruxtEntityBlockContentBannerBlock',
 
   mixins: [DruxtEntityMixin],
 
+  async fetch() {
+    if (!this.fields.field_media_image) {
+      return
+    }
+
+    this.media = await this.getResource(this.fields.field_media_image.data.data)
+    this.image = await this.getResource(this.media.relationships.field_media_image.data)
+    this.img = this.image.attributes.uri.url
+  },
+
   data: () => ({
     image: false,
     img: false,
     media: false,
   }),
-
-  created() {
-    const query = this.fields.field_media_image.data.data
-    this.$store.dispatch('druxtRouter/getEntity', query).then((media) => {
-      this.media = media
-      const query = media.relationships.field_media_image.data
-      this.$store.dispatch('druxtRouter/getEntity', query).then((image) => {
-        this.image = image
-        this.img = image.attributes.uri.url
-      })
-    })
-  },
 
   computed: {
     style() {
@@ -65,6 +64,12 @@ export default {
       }
     },
   },
+
+  methods: {
+    ...mapActions({
+      getResource: 'druxtRouter/getEntity'
+    })
+  }
 }
 </script>
 

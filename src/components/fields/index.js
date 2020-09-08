@@ -1,5 +1,8 @@
-import DruxtFieldEntityReferenceLabel from './DruxtFieldEntityReferenceLabel.vue'
-export { DruxtFieldEntityReferenceLabel }
+import DruxtFieldEntityReferenceLabelFieldRecipeCategory from './DruxtFieldEntityReferenceLabelFieldRecipeCategory.vue'
+export { DruxtFieldEntityReferenceLabelFieldRecipeCategory }
+
+import DruxtFieldEntityReferenceLabelFieldTags from './DruxtFieldEntityReferenceLabelFieldTags.vue'
+export { DruxtFieldEntityReferenceLabelFieldTags }
 
 import DruxtFieldLinkFieldContentLink from './DruxtFieldLinkFieldContentLink.vue'
 export { DruxtFieldLinkFieldContentLink }
